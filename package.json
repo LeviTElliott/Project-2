@@ -1,23 +1,8 @@
 {
   "dependencies": {
-    "axios": "^0.27.1",
     "ejs": "^3.1.7",
     "express": "^4.18.0",
-<<<<<<< HEAD
     "method": "^2.0.0",
-=======
-    "method-override": "^3.0.0",
->>>>>>> 494e6c2a3a6a9e6faa273960d7065d1aec2ce893
-    "mongoose": "^6.3.1"
-  },
-  "name": "2project",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+    "nodemon": "^2.0.15"
+  }
 }
