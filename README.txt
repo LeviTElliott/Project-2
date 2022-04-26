@@ -4,16 +4,16 @@ Welcome to Our Project 2!
 
 
 ##User
--As a user, I want to be able to put my email and password
--As a user, I want to ba able to click log-in
--As a user, I want to be able to post 
--As a user, I want to be able to like a post
+-As a user, I want to be able to create an account with my email and password.
+-As a user, I want to ba able to log-in with those criteria.
+-As a user, I want to be able to post content from my user account.
+-As a user, I want to be able to like interact with posts from other user accounts.
 
 
 ##MVP
--I want to know if I cannot log-in 
--I want to know if I put the wrong information
--I want to know if my post is posted
+-I want to know if I cannot log-in.
+-I want to know if I put the wrong information.
+-I want to know if my post is posted.
 
 
 ##WireFram
