@@ -35,3 +35,5 @@ router.post('register', async (req, res, next) => {
 
     }
 })
+
+module.exports = router 
