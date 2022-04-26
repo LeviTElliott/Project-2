@@ -11,7 +11,10 @@ const app = express();
 require('./config/db.connection')
 
 // configure the app settings (used by app.listen)
-const PORT = 4100;
+const PORT = 4000;
 
+
+//app configs - app.set()
+//app.set('view engine', 'ejs')
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
