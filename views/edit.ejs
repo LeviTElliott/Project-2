@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs', { pageName: "edit page" }) %>
+<body>
+    <%- include('partials/nav.ejs')%>
+    <h1>Edit Page | <%= product.name%></h1>
+    <div>
+        <form method="POST" action="/products/<%= post._id %>?_method=PUT">
+            <div>
+                <label>Post</label>
+                <input type="text" name="name" value="<%= post.name%>"/>
+            </div>
+            <div>
+                <input type="submit" value="Edit Product: <%= post.name%>"/>
+            </div>
+        </form>
+    </body>
+    </html>

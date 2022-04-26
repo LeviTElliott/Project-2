@@ -77,6 +77,9 @@ app.get('/users/:id', (req, res) => {
   //   users.splice(req.params.id,1);
   //   res.redirect('/users');
   // })
+
+
+  
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`)
 });
