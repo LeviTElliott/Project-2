@@ -3,14 +3,8 @@
     <%- include('partials/head.ejs') %>
 <body>
     <%- include('partials/nav.ejs') %>
-    <div>
-        <% for(let i = 0; i < parks.length; i++){ %> 
-            <% const allParks = parks[i] %>
-                <h3><a class='parkImages' href='/parks/<%=i%>'><%=allParks.name %> 
-                    <img src='<%=allParks.image%>' alt='<%=allParks.name %>'/>
-                    </a>
-                </h3>
-            <% } %>  
-    </div>
+    <form action="/logout?_method=DELETE"=POST>
+        <button type ="submit">Log Out</button>
+    </form>
 </body>
 </html>
