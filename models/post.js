@@ -12,7 +12,7 @@ const postSchema = new mongoose.Schema({
 },
     {
         timestamps: true
-    }
+    } 
 );
 
 // mongoose.model(<mongodb collection name>, our schema)

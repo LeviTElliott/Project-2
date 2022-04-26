@@ -2,6 +2,6 @@
 // require('../models')
 
 module.exports = {
-    post: require('./post_controller'),
+    login: require('./login_controller'),
     auth: require('./auth_controller')
 }
