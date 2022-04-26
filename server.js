@@ -44,10 +44,10 @@ app.post('/users', (req, res) => {
 })
 
 // EDIT ROUTE
-app.get('/users/:id/edit', (req, res) => {
-  let foundUser = users[req.params.id]
+app.get('/post/:id/edit', (req, res) => {
+  let foundPost = post[req.params.id]
   const context = {
-    users: foundUser,
+    post: foundpost,
     id: req.params.id
   }
   console.log(foundUser, req.body)
@@ -79,7 +79,7 @@ app.get('/users/:id', (req, res) => {
   // })
 
 
-  
+
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`)
 });
