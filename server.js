@@ -1,17 +1,82 @@
-// import express
 const express = require('express');
-const methodOverride = require('method-override')
-// const productController = require('./controllers/products_controller')
-const controllers = require('./controllers')
-// create instance
 const app = express();
-
-
-// db connection
-require('./config/db.connection')
-
-// configure the app settings (used by app.listen)
 const PORT = 4100;
+const users = require('./users/users.js');
+const methodOverride = require('method-override');
+
+//==============================================
+//                   Middleware
+//==============================================
+app.set('view engine', 'ejs');
+
+app.use(express.static('public'));
+
+app.use(express.urlencoded({extended: true }));
+
+app.use(methodOverride('_method'))
+
+//==============================================
+//                    ROUTES 
+//==============================================
 
 
-app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
+// INDEX ROUTE
+app.get('/users', (req, res) => {
+  const context = { users: users };
+  res.render('index.ejs', context)
+});
+
+// NEW ROUTE
+app.get('/users/new', (req, res)=>{
+  res.render('new.ejs')
+})
+
+//POST ROUTE
+app.post('/users', (req, res) => {
+  let value = {
+    name: req.body.name,
+    Image: req.body.image,
+    location:req.body.location,
+    date:req.body.date,
+}
+  parks.push(req.body)
+  res.redirect('/users')
+})
+
+// EDIT ROUTE
+app.get('/users/:id/edit', (req, res) => {
+  let foundUser = users[req.params.id]
+  const context = {
+    users: foundUser,
+    id: req.params.id
+  }
+  console.log(foundUser, req.body)
+  res.render('edit.ejs', context)
+});
+  
+  //PUT ROUTE
+  app.put('/users/:id', (req, res) =>{
+    console.log('test')
+    parks[req.params.id] = req.body
+    res.redirect(`/users/${req.params.id}`)
+  })
+
+  // SHOW ROUTE
+app.get('/users/:id', (req, res) => {
+  let userId = req.params.id;
+  const context = {
+    oneUser: users[userId],
+    message: 'Visit Today!!',
+    id: userId,
+  };
+  res.render('show.ejs', context);
+});
+  
+  // // DELETE ROUTE
+  // app.delete('/users/:id', (req, res) => {
+  //   users.splice(req.params.id,1);
+  //   res.redirect('/users');
+  // })
+app.listen(PORT, () => {
+    console.log(`Listening on port: ${PORT}`)
+});
