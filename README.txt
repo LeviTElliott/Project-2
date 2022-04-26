@@ -11,9 +11,16 @@ Welcome to Our Project 2!
 
 
 ##MVP
--I want to know if I cannot log-in.
--I want to know if I put the wrong information.
--I want to know if my post is posted.
+- Create user accounts with custom criteria.
+- Create a kickback to the client if information input is inacurate for log-in.
+- Create a forum for client-side posts from different accounts.
+- Create methods for users to interact with another users post. (like button)
+
+##stretch goal
+- create a comment section on the users-post forum
+- css styling
+- scaleable interface so various window sizes are acommodated
+- client-side delete button for "regrettable" posts.
 
 
 ##WireFram
@@ -22,3 +29,20 @@ https://www.figma.com/file/vL5xXLBaGB2y9GPo0SnBsu/Untitled?node-id=0%3A1
 
 
 ## Technologies
+code snippet from early schema model:
+const mongoose = require('mongoose');
+
+const postSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: [true, 'name cannot be empty :(']
+    },
+    post: {
+        type: Number,
+        required: [true, 'post cannot be empty!']
+    },  
+},
+    {
+        timestamps: true
+    } 
+);
