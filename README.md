@@ -1,6 +1,6 @@
 Welcome to Our Project 2!
 
-## Project 2 - Three Features of Social Media
+# Project 2 - Three Features of Social Media
 
 ## Project Description 
 This is a social media platform where a user can login by their email address and password. The user will be able to post and will be able click and see the other users posts.
@@ -25,12 +25,12 @@ This is a social media platform where a user can login by their email address an
 - Client-side delete button for "regrettable" posts.
 
 ## Division of labor
-# Argeline: 
+### Argeline: 
 - Schemas 
 - CSS
 - Index construction
 
-# Levi:
+### Levi:
 - Server.js
 - File structure/branching
 - Formatting for ejs files
