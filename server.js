@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const PORT = 4100;
-const users = require('./users/users.js');
+const users = require('./models/user.js');
+const postUp = require('./models/post.js')
 // const methodOverride = require('method-override');
 
 //==============================================

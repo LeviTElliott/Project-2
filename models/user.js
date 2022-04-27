@@ -13,10 +13,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, 'password cannot be empty']
     },
-    picture: {
-        type: Image,
-    }
 });
 
-const post = mongoose.model('users', userSchema);
+const users = mongoose.model('users', userSchema);
 module.exports = users; 
