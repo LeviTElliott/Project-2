@@ -11,7 +11,7 @@ Welcome to Our Project 2!
 
 
 ## MVP
-- Create user accounts with custom criteria.
+- Create "dummy" user accounts with custom criteria.
 - css styling.
 - Create a kickback to the client if information input is inacurate for log-in.
 - Create a forum for client-side posts from different accounts.
@@ -23,7 +23,8 @@ Welcome to Our Project 2!
 - client-side delete button for "regrettable" posts.
 
 ## division of labor
-
+Argeline: Schemas, CSS, index construction,
+Levi: server.js, file structure/branching, formatting for ejs files, building databases, file submission
 
 ## WireFram
 Wireframes and models can be found in the images folder in the files:

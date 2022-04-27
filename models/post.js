@@ -12,8 +12,8 @@ const postSchema = new mongoose.Schema({
     },
     comments: {
         type: string,
-    },
-},
+    }
+}),
 // mongoose.model(<mongodb collection name>, our schema)
 
 module.exports = post
