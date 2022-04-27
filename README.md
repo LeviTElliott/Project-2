@@ -1,7 +1,9 @@
 Welcome to Our Project 2!
 
-## Project Description 
+## Project 2 - Three Features of Social Media
 
+## Project Description 
+This is a social media platform where a user can login by their email address and password. The user will be able to post and will be able click and see the other users posts.
 
 ## User
 - As a user, I want to be able to create an account with my email and password.
@@ -12,32 +14,44 @@ Welcome to Our Project 2!
 
 ## MVP
 - Create "dummy" user accounts with custom criteria.
-- css styling.
+- CSS styling.
 - Create a kickback to the client if information input is inacurate for log-in.
 - Create a forum for client-side posts from different accounts.
 - Create methods for users to interact with another users post. (like button)
 
-## stretch goal
-- create a comment section on the users-post forum.
-- scaleable interface so various window sizes are acommodated
-- client-side delete button for "regrettable" posts.
+## Stretch goal
+- Create a comment section on the users-post forum.
+- Scaleable interface so various window sizes are acommodated
+- Client-side delete button for "regrettable" posts.
 
-## division of labor
-Argeline: Schemas, CSS, index construction,
-Levi: server.js, file structure/branching, formatting for ejs files, building databases, file submission
+## Division of labor
+# Argeline: 
+- Schemas 
+- CSS
+- Index construction
 
-## WireFram
+# Levi:
+- Server.js
+- File structure/branching
+- Formatting for ejs files
+- Building databases
+- File submission
+
+## WireFrame
 Wireframes and models can be found in the images folder in the files:
 
 
 
 
 ## Technologies
-css
-javascript
-HTML
+- CSS
+- JavaScript
+- HTML
+- Node.js
+- Mongoose
+- Mongo
 
-## models/code snippet
+## Mdels/Code Snippet
 code snippet from early schema model:
 const mongoose = require('mongoose');
 
