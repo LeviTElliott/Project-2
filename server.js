@@ -44,7 +44,7 @@ app.post('/users', (req, res) => {
 })
 
 // EDIT ROUTE
-app.get('/post/:id/edit', (req, res) => {
+app.get('/:id/edit', (req, res) => {
   let foundPost = post[req.params.id]
   const context = {
     post: foundpost,
@@ -62,7 +62,7 @@ app.get('/post/:id/edit', (req, res) => {
   })
 
   // SHOW ROUTE
-app.get('/users/:id', (req, res) => {
+app.get('/post/:id', (req, res) => {
   let userId = req.params.id;
   const context = {
     oneUser: users[userId],
