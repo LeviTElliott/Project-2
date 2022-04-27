@@ -1,22 +1,22 @@
 const mongoose = require('mongoose');
-const post = mongoose.model('Post', postSchema);
 
 const postSchema = new mongoose.Schema({
     post: {
         type: String,
-        required: [true, 'posts cannot be empty :(']
+        required: [true, 'posts cannot be empty:']
     },
     hostPage: {
-        type: string,
+        type: String,
         required: [true, 'Show a link to your page!']
     },
     comments: {
-        type: string,
+        type: String,
     }
-}),
+});
 // mongoose.model(<mongodb collection name>, our schema)
 
-module.exports = post
+const post = mongoose.model('Post', postSchema);
+module.exports = post; 
 
 // we will access the array data through our 'database'
 // without our module.exports we would not be able to access data from this file
