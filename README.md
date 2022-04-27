@@ -40,7 +40,9 @@ This is a social media platform where a user can login by their email address an
 ## WireFrame
 Wireframes and models can be found in the images folder in the files:
 
+![wireframe 2 1](https://user-images.githubusercontent.com/101364797/165627786-1f231b37-2be4-47b6-aefc-75fe93c6d676.png)
 
+![wireframe 2 2](https://user-images.githubusercontent.com/101364797/165627796-602281dc-2a38-43d5-8707-9ded1340e529.png)
 
 
 ## Technologies
