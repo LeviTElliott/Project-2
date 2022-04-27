@@ -6,7 +6,7 @@ const postSchema = new mongoose.Schema({
         required: [true, 'name cannot be empty :(']
     },
     post: {
-        type: Number,
+        type: string,
         required: [true, 'post cannot be empty!']
     },  
 },
