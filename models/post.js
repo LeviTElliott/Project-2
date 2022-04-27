@@ -1,22 +1,20 @@
 const mongoose = require('mongoose');
+const post = mongoose.model('Post', postSchema);
 
 const postSchema = new mongoose.Schema({
-    name: {
-        type: String,
-        required: [true, 'name cannot be empty :(']
-    },
     post: {
-        type: Number,
-        required: [true, 'post cannot be empty!']
-    },  
+        type: String,
+        required: [true, 'posts cannot be empty :(']
+    },
+    hostPage: {
+        type: string,
+        required: [true, 'Show a link to your page!']
+    },
+    comments: {
+        type: string,
+    },
 },
-    {
-        timestamps: true
-    } 
-);
-
 // mongoose.model(<mongodb collection name>, our schema)
-const post = mongoose.model('Post', postSchema);
 
 module.exports = post
 

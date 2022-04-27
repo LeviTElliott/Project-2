@@ -26,7 +26,8 @@ Welcome to Our Project 2!
 
 
 ## WireFram
-https://www.figma.com/file/vL5xXLBaGB2y9GPo0SnBsu/Untitled?node-id=0%3A1
+Wireframes and models can be found in the images folder in the files:
+
 
 
 
@@ -35,21 +36,45 @@ css
 javascript
 HTML
 
-## models
+## models/code snippet
 code snippet from early schema model:
 const mongoose = require('mongoose');
 
-const postSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, 'name cannot be empty :(']
     },
+    email {
+        type: string,
+        required: [true, 'email cannot appear empyty']
+    },
+    password {
+        type: string,
+        required: [true, 'password cannot be empty']
+    },
+    profile picture {
+        type: img,
+    }
     post: {
-        type: Number,
-        required: [true, 'post cannot be empty!']
+        type: string,
     },  
 },
     {
         timestamps: true
     } 
 );
+
+
+const postSchema = new mongoose.Schema({
+    post: {
+        type: String,
+        required: [true, 'posts cannot be empty :(']
+    },
+    hostPage {
+        type: string,
+        required: [true, 'Show a link to your page!']
+    },
+    comments {
+        type: string,
+    },
