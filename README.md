@@ -52,7 +52,7 @@ Wireframes and models can be found in the images folder in the files:
 - Mongo
 
 ## Mdels/Code Snippet
-code snippet from early schema model:
+Code snippet from early schema model:
 const mongoose = require('mongoose');
 
 ```const userSchema = new mongoose.Schema({
