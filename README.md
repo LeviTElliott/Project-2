@@ -41,10 +41,10 @@ HTML
 code snippet from early schema model:
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+```const userSchema = new mongoose.Schema({
     name: {
         type: String,
-        required: [true, 'name cannot be empty :(']
+        required: [true, 'name cannot be empty:']
     },
     email {
         type: string,
@@ -64,10 +64,10 @@ const userSchema = new mongoose.Schema({
     {
         timestamps: true
     } 
-);
+);```
 
 
-const postSchema = new mongoose.Schema({
+```const postSchema = new mongoose.Schema({
     post: {
         type: String,
         required: [true, 'posts cannot be empty :(']
@@ -78,4 +78,4 @@ const postSchema = new mongoose.Schema({
     },
     comments {
         type: string,
-    },
+    },```
