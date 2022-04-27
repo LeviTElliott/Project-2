@@ -64,10 +64,10 @@ const mongoose = require('mongoose');
     {
         timestamps: true
     } 
-);```
+);
 
 
-```const postSchema = new mongoose.Schema({
+const postSchema = new mongoose.Schema({
     post: {
         type: String,
         required: [true, 'posts cannot be empty :(']
