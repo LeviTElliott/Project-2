@@ -4,15 +4,21 @@
 <%- include('partials/head.ejs') %>
 
     <body>
-        <h1>New Post</h1>
-        <form method="POST" action="/post/models/post.js">
-            <!-- method => POST - attach the data to post body rather than in the url query string(GET request) -->
-            <!-- action => destination for the post req -->
+        <h1>Create your account</h1>
+        <form method="POST" action="/users/createaccount">
             <div>
-                <label for="post"> Facebook Post: </label>
-                <input id="post" name="name" type="text" />
+                <label for="name"> Name:</label>
+                <input id="name" name="name" type="text"/>
             </div>
-            <input type="submit" value="Create new Post">
+            <div>
+                <label for="email"> Email:</label>
+                <input id="email" name="email" type="text"/>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input id="password" name="password" type="text"/>
+            </div>
+            <input type="submit" value="submit"/>
         </form>
     </body>
 
