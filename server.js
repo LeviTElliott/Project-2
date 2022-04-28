@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: true }));
 
 // INDEX ROUTE
 app.get('/users', (req, res) => {
-  const context = { users: users };
+  const context = { users: users};
   res.render('index.ejs', context)
 });
 
