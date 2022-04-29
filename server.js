@@ -45,10 +45,10 @@ app.post('/users', (req, res) => {
 })
 
 // EDIT ROUTE
-app.get('users/:id/user', (req, res) => {
-  let foundPost = post[req.params.id]
+app.get('/users/:id/edit', (req, res) => {
+  let foundUser = users[req.params.id]
   const context = {
-    post: foundPost,
+    users: foundUser,
     id: req.params.id
   }
   console.log(foundUser, req.body)

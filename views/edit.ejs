@@ -1,18 +1,21 @@
 <html lang="en">
-<%- include('partials/head.ejs', { pageName: "edit page" }) %>
-<body>
-    <%- include('partials/nav.ejs')%>
-    <h1>Edit Page | <%= post.name%></h1>
-    <div>
-        <form method="POST" action="/post/<%= id %>?_method=PUT">
+    <%- include('partials/head.ejs', { pageName: "edit page" }) %>
+    <body>
+        <%- include('partials/nav.ejs')%>
+        <h1>Other User Page</h1>
+        <form method="POST" action="/users/:id/edit">
+            <img src="images/"/>
+            <h3>Name:</h3>
+            <br>
             <div>
-                <label>Post</label>
-                <input type="text" name="name" value="<%= post.name%>"/>
+                <label for="post"> What's on your mind?</label>
+                <input id="post" name="post" type="text"/>
             </div>
             <div>
-                <input type="submit" value="Post: <%= post.name%>"/>
+                <label for="img"> Post</label>
+                <input id="img" name="img" type="text"/> 
             </div>
+        </br>
         </form>
-        </div>
-    </body>
+        </body>
     </html>
