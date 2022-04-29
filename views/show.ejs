@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <header>
-        
-    </header>
+
+    <%-include ("partials/head.ejs")%>
+
+    
+    <body>
+        <h1>Profile Page</h1>
+        <form method="POST" action="/users/:id">
+        <img src="images/"/>
+        <h3>Name:</h3>
+        <br>
+        <div>
+            <label for="post"> What's on your mind?</label>
+            <input id="post" name="post" type="text"/>
+        </div>
+        <div>
+            <label for="img"> Post Image (url)</label>
+            <input id="img" name="img" type="text"/> 
+        </div>
+    </br>
+</form>
 </body>
 </html>
