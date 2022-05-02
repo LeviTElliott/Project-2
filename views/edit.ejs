@@ -3,6 +3,7 @@
     <%- include('partials/head.ejs', { pageName: "edit page" }) %>
     <body>
         <%- include('partials/nav.ejs')%>
+        <div class="user">
         <h1>Other User Page</h1>
         <form method="POST" action="/users/:id/edit">
             <img src="images/"/>
@@ -16,7 +17,9 @@
                 <label for="img"> Post</label>
                 <input id="img" name="img" type="text"/> 
             </div>
+            <input class ='button' type="submit" value="Create">
         </br>
         </form>
+        </div>
         </body>
     </html>
