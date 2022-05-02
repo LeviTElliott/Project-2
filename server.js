@@ -46,7 +46,7 @@ app.get('/users/new', (req, res)=>{
 })
 
 //POST ROUTE
-app.post('/users', (req, res) => {
+app.post('/posts', (req, res) => {
   let value = {
     name: req.body.name,
     email: req.body.email,
