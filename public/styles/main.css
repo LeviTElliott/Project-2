@@ -68,16 +68,25 @@ position:absolute;
 top:50%;
 left:50%;
 transform: translate(-50%, -50%);
-width: 400px;
- background: lightsteelblue;
+width: 600px;
+background: lightsteelblue;
 border-radius: 10px;
-height: 20vh;
+height: 50vh;
 font-family: 'Grape Nuts', cursive;
 font-family: 'Merriweather', serif;
 font-family: 'Rubik Microbe', cursive;
 }
     
 .nav {
-    width:980px;
-    margin: 0 auto;
+width:980px;
+margin: 0 auto;
+text-align: center;
+background-color: aliceblue;
+width: 200px;
+font-family: 'Lato', sans-serif;
 }
+
+.profile h1{
+    text-align: center;
+    padding: 0 0 20px;
+ }
