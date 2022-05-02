@@ -2,12 +2,14 @@
 <html lang="en">
 
     <%-include ("partials/head.ejs")%>
-    <link rel="stylesheet" href="/styles/main.css">
-    
+
     <body>
         <%- include('partials/nav.ejs') %>
+
+        
+        <div class="profile">
         <h1>Profile Page</h1>
-        <form method="POST" action="/posts/:id">
+        <form method="POST" action="/users/:id/edit">
         <img src="images/"/>
         <h3>Name:</h3>
     <br>
@@ -22,5 +24,6 @@
     </br>
     <input class ='button' type="submit" value="Create">
 </form>
+</div>
 </body>
 </html>
