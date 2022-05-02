@@ -4,8 +4,11 @@
 <%- include('partials/head.ejs') %>
 
 
-    <body>
+<body>
+    <div class="create">
         <h1>Create your account</h1>
+        </div>
+        <div class="register">
         <form method="POST" action="/users/createaccount">
             <div>
                 <label for="name"> Name:</label>
@@ -21,5 +24,6 @@
             </div>
             <a href="/users">Submit</a>
         </form>
+        </div>
     </body>
 </html>
