@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const app = express();
 const PORT = 4100;
 const users = require('./models/user.js');
-const postUp = require('./models/post.js');
 const posts = require('./models/post.js');
 // const methodOverride = require('method-override');
 
