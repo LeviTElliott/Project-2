@@ -81,7 +81,7 @@ app.get('/postUp/:id', (req, res) => {
   //   res.redirect('/users');
   // })
 
-
+  app.use(express.static('public'))
 
 app.listen(PORT, () => {
     console.log(`Listening on port: ${PORT}`)
