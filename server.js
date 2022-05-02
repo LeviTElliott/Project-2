@@ -46,13 +46,13 @@ app.get('/users/new', (req, res)=>{
 })
 
 //POST ROUTE
-app.post('/posts', (req, res) => {
+app.post('/users', (req, res) => {
   let value = {
     name: req.body.name,
     email: req.body.email,
     password: req.body.password,
 }
-  parks.push(req.body)
+  users.push(req.body)
   res.redirect('/users')
 })
 
