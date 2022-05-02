@@ -1,4 +1,5 @@
 const express = require('express');
+const mongoose = require('mongoose');
 const app = express();
 const PORT = 4100;
 const users = require('./models/user.js');
@@ -64,7 +65,7 @@ app.get('/users/:id/edit', (req, res) => {
   })
 
   // SHOW ROUTE
-app.post('/postUp/:id', (req, res) => {
+app.get('/postUp/:id', (req, res) => {
   let postId = req.params.id;
   const context = {
     onePost: posts[postId],
