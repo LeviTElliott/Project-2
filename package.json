@@ -16,7 +16,6 @@
   "description": "Welcome to Our Project 2!",
   "version": "1.0.0",
   "main": "server.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LeviTElliott/Project-2.git"
