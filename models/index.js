@@ -2,5 +2,5 @@
 // require('../config/db.connection')
 
 module.exports = {
-    post: require('./post')
+    posts: require('./post')
 }

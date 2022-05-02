@@ -15,7 +15,7 @@ const postSchema = new mongoose.Schema({
 });
 // mongoose.model(<mongodb collection name>, our schema)
 
-const posts = mongoose.model('post', postSchema);
+const posts = mongoose.model('posts', postSchema);
 module.exports = posts; 
 
 // we will access the array data through our 'database'
