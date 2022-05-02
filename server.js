@@ -97,9 +97,9 @@ app.post('/posts', (req, res) => {
 });
   
   // DELETE ROUTE
-  app.delete('/users/:id', (req, res) => {
-    users.splice(req.params.id,1);
-    res.redirect('/users');
+  app.delete('/posts/:id', (req, res) => {
+    posts.splice(req.params.id,1);
+    res.redirect('/posts');
   })
 
   app.use(express.static('public'))
