@@ -2,12 +2,13 @@
 <html lang="en">
 
     <%-include ("partials/head.ejs")%>
-
+    <link rel="stylesheet" href="/styles/main.css">
     
     <body>
         <%- include('partials/nav.ejs') %>
         <h1>Profile Page</h1>
-        <form method="POST" action="/posts">
+        <form method="POST" action="/postUp/:id">
+        <img src="images/"/>
         <h3>Name:</h3>
     <br>
         <div>
