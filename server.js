@@ -70,7 +70,7 @@ app.get('/users/:id/edit', (req, res) => {
   //PUT ROUTE
   app.put('/users/:id', (req, res) =>{
     console.log('test')
-    parks[req.params.id] = req.body
+    users[req.params.id] = req.body
     res.redirect(`/users/${req.params.id}`)
   })
 
@@ -83,6 +83,17 @@ app.get('/posts/:id', (req, res) => {
     id: postId,
   };
   res.render('show.ejs', context);
+});
+
+//POST ROUTE2
+app.post('/posts', (req, res) => {
+  let value = {
+    post: req.body.post,
+    hostPage: req.body.hostPage,
+    comments: req.body.comments,
+}
+  posts.push(req.body)
+  res.redirect('/posts')
 });
   
   // // DELETE ROUTE
