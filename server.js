@@ -2,7 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = 4100;
 const users = require('./models/user.js');
-const postUp = require('./models/post.js')
+const postUp = require('./models/post.js');
+const posts = require('./models/post.js');
 // const methodOverride = require('method-override');
 
 //==============================================
@@ -63,12 +64,12 @@ app.get('/users/:id/edit', (req, res) => {
   })
 
   // SHOW ROUTE
-app.get('/users/:id', (req, res) => {
-  let userId = req.params.id;
+app.get('/postUp/:id', (req, res) => {
+  let postId = req.params.id;
   const context = {
-    oneUser: users[userId],
-    message: 'Visit Today!!',
-    id: userId,
+    onePost: posts[postId],
+    message: 'Create a Post Here!',
+    id: postId,
   };
   res.render('show.ejs', context);
 });
