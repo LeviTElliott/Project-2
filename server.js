@@ -85,6 +85,11 @@ app.get('/posts/:id', (req, res) => {
   res.render('show.ejs', context);
 });
 
+//Index Route 2
+app.get('/posts', (req, res) => {
+  const context = { posts: posts};
+  res.render('post.ejs', context)
+});
 //POST ROUTE2
 app.post('/posts', (req, res) => {
   let value = {
