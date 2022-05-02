@@ -1,6 +1,8 @@
 const express = require('express');
+const methodOverride = require('method-override')
 const mongoose = require('mongoose');
 require('dotenv').config();
+const app = express();
 const connectionStr = process.env.MONGODB_URL
 mongoose.connect(connectionStr);
 mongoose.connection.on('connected' , () => {
@@ -12,11 +14,10 @@ mongoose.connection.on ('error', (error) => {
 mongoose.connection.on('disconnected', () => {
   console.log('MongoDB disconnected')
 });
-const app = express();
 const PORT = 4100;
 const users = require('./models/user.js');
 const posts = require('./models/post.js');
-// const methodOverride = require('method-override');
+
 
 //==============================================
 //                   Middleware
@@ -27,7 +28,7 @@ app.use(express.static('public'));
 
 app.use(express.urlencoded({extended: true }));
 
-// app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))
 
 //==============================================
 //                    ROUTES 
@@ -87,6 +88,7 @@ app.get('/posts/:id', (req, res) => {
 
 //Index Route 2
 app.get('/posts', (req, res) => {
+  console.log(req.body)
   const context = { posts: posts};
   res.render('post.ejs', context)
 });
