@@ -76,7 +76,7 @@ app.get('/users/:id/edit', (req, res) => {
   })
 
   // SHOW ROUTE
-app.get('/postUp/:id', (req, res) => {
+app.get('/posts/:id', (req, res) => {
   let postId = req.params.id;
   const context = {
     onePost: posts[postId],
