@@ -49,9 +49,8 @@ app.get('/users/new', (req, res)=>{
 app.post('/users', (req, res) => {
   let value = {
     name: req.body.name,
-    Image: req.body.image,
-    location:req.body.location,
-    date:req.body.date,
+    email: req.body.email,
+    password: req.body.password,
 }
   parks.push(req.body)
   res.redirect('/users')
@@ -76,7 +75,7 @@ app.get('/users/:id/edit', (req, res) => {
   })
 
   // SHOW ROUTE
-app.get('/postUp/:id', (req, res) => {
+app.get('/posts/:id', (req, res) => {
   let postId = req.params.id;
   const context = {
     onePost: posts[postId],
