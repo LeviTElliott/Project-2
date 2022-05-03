@@ -10,8 +10,12 @@
  <div class="post">
     <h1>Post</h1>
     <form method="POST" action="/posts">
-      
    </form>
+   <% for( let i = 0; i < posts.length; i++ ) { %>
+   <div>
+    <p class="post"><%=posts[i].post  %></p>
+   </div>
+   <% } %>
 </div>
 </body>
 </html>

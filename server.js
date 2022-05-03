@@ -76,22 +76,25 @@ app.get('/users/:id/edit', (req, res) => {
   })
 
   // SHOW ROUTE
-app.get('/posts/:id', (req, res) => {
-  let postId = req.params.id;
-  const context = {
-    onePost: posts[postId],
-    message: 'Create a Post Here!',
-    id: postId,
-  };
-  res.render('show.ejs', context);
-});
+  app.get('/posts/:id', async (req, res) => {
+    const foundUser = await users.find({})
+    try {
+    } catch (error) {}  
+    const context = { users: foundUser};
+    res.render('show.ejs', context);
+  });
 
 //Index Route 2
-app.get('/posts', (req, res) => {
-  console.log(req.body)
-  const context = { posts: posts};
+app.get('/posts', async (req, res) => {
+  //console.log(req.body)
+  const foundPost = await posts.find({})
+  console.log(foundPost)
+  try {
+  } catch (error) {}
+  const context = { posts: foundPost};
   res.render('post.ejs', context)
 });
+
 //POST ROUTE2
 app.post('/posts', (req, res) => {
   let value = {
