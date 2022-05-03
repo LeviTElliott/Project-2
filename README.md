@@ -29,6 +29,8 @@ This is a social media platform where a user can login by their email address an
 - Schemas 
 - CSS
 - Index construction
+- ejs Constructions
+- Heroku launch
 
 ### Levi:
 - Server.js
@@ -36,6 +38,7 @@ This is a social media platform where a user can login by their email address an
 - Formatting for ejs files
 - Building databases
 - File submission
+- Schemas
 
 ## WireFrame
 Wireframes and models can be found in the images folder in the files:
