@@ -14,7 +14,7 @@ mongoose.connection.on ('error', (error) => {
 mongoose.connection.on('disconnected', () => {
   console.log('MongoDB disconnected')
 });
-const PORT = 4100;
+const PORT = process.env.PORT;
 const users = require('./models/user.js');
 const posts = require('./models/post.js');
 
@@ -120,6 +120,6 @@ app.post('/posts', (req, res) => {
 
   app.use(express.static('public'))
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Listening on port: ${PORT}`)
 });
