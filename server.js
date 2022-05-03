@@ -14,7 +14,7 @@ mongoose.connection.on ('error', (error) => {
 mongoose.connection.on('disconnected', () => {
   console.log('MongoDB disconnected')
 });
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 4100;
 const users = require('./models/user.js');
 const posts = require('./models/post.js');
 
@@ -34,6 +34,10 @@ app.use(methodOverride('_method'))
 //                    ROUTES 
 //==============================================
 
+//Startup Route
+app.get('/', (req, res) => {
+  res.redirect('/users/new')
+});
 
 // INDEX ROUTE
 app.get('/users', (req, res) => {
@@ -118,7 +122,6 @@ app.post('/posts', (req, res) => {
   };
 });
 
-  app.use(express.static('public'))
 
 app.listen(process.env.PORT, () => {
     console.log(`Listening on port: ${PORT}`)
