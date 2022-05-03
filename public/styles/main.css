@@ -119,3 +119,16 @@ padding: 0 0 20px;
  }
 
  /*post*/
+ .post {
+text-align: center;
+background: lightsteelblue;
+font-family: 'Merriweather', serif;
+font-family: 'Rubik Microbe', cursive;
+
+ }
+
+ .post h1{
+text-align: center;
+padding: 0 0 20px;
+font-family: 'Merriweather', serif;
+ }

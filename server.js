@@ -107,10 +107,16 @@ app.post('/posts', (req, res) => {
 });
   
   // DELETE ROUTE
-  app.delete('/posts/:id', (req, res) => {
-    posts.splice(req.params.id,1);
-    res.redirect('/posts');
-  })
+  app.delete('/posts/:id', async (req, res) => {
+    try {
+      const deletedPost = await db.posts.findByIdAndDelete(req.params.id);
+      return res.redirect(`/posts/:id`);
+  } catch (error) {
+      console.log(error);
+      req.error = error;
+      return next();
+  };
+});
 
   app.use(express.static('public'))
 
