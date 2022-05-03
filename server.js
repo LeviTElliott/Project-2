@@ -84,7 +84,7 @@ app.get('/users/:id/edit', (req, res) => {
     res.render('show.ejs', context);
   });
 
-//Index Route 2
+//Index Route 2 
 app.get('/posts', async (req, res) => {
   //console.log(req.body)
   const foundPost = await posts.find({})
